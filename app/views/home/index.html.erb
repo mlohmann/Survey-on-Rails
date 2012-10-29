@@ -1,0 +1,16 @@
+<div id="impress"> 
+    <% @questions.each_with_index do |question, index| %>
+      <div class="step slide" data-x="<%= index*1500 %>" data-x="<%= index*1500 %>" data-rotate-y="<%= index*10 %>" data-qid="<%= question.id %>">
+        <%= question.text %>         
+        <div data-toggle="buttons-radio">
+          <button type="button" class="btn btn-primary affirm">YES</button> 
+          <button type="button" class="btn btn-primary oppose">NO</button>
+        </div> 
+      </div> 
+    <% end %>
+    <div id="outcome" class="step slide" data-x="0" data-y="2000" data-rotate-y="45">
+	   <h1>You must answer all questions to view your outcome</h1>
+    </div>
+</div>
+
+<script src="assets/impress.js"></script> 

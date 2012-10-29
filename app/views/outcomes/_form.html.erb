@@ -1,0 +1,39 @@
+<%= form_for(@outcome) do |f| %>
+	<% if @outcome.errors.any? %>
+	<div class="row">
+	   <div class="span12"> 
+		 <div id="error_explanation">
+	      <h2><%= pluralize(@outcome.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+	      <ul>
+	      <% @outcome.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div> 
+	  </div>
+	</div>
+    <% end %> 
+	
+	<div class="row">  
+	  <div class="span3">
+	    <%= f.label :title %>
+	    <%= f.text_field :title %>
+	  </div>
+	</div>
+   
+    <div class="row">  
+	  <div class="span3">
+	    <%= f.label :description %>
+	    <%= f.text_field :description %>
+	  </div>
+	</div>
+
+	<div class="row">  
+	   <div class="span3"> 
+		  <div class="actions">
+		    <%= f.submit(:class => 'btn btn-small btn-success') %>
+		  </div> 
+	   </div>  
+	</div>
+<% end %>

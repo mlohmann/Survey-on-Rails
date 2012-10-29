@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Token:</b>
+  <%= @token.title %>
+</p>
+ 
+<p>
+  <b>Question:</b>
+  <%= @token_impact.question.text %><br /> 
+</p>
+
+<p>
+  <b>Affirm strength:</b>
+  <%= @token_impact.affirm_strength %>
+</p>
+
+<p>
+  <b>Oppose strength:</b>
+  <%= @token_impact.oppose_strength %>
+</p>
+
+
+<%= link_to 'Edit', edit_token_impact_path(@token_impact) %> |
+<%= link_to 'Back to Admin', '/admin' %>

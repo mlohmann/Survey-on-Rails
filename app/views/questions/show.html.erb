@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Text:</b>
+  <%= @question.text %> 
+</p>
+ 
+<table>
+<% @question.token_impacts.each do |token_impact| %>
+  <tr>
+    <td><%= token_impact.token_title %></td>   
+    <td>Affirm</td>
+    <td><%= token_impact.affirm_strength %></td>
+    <td>Oppose</td> 
+    <td><%= token_impact.oppose_strength %></td> 
+    <td><%= link_to 'Edit', edit_token_impact_path(token_impact) %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back to Admin', '/admin' %>

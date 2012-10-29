@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<h1>Edit Token</h1>
+		</div>
+	</div>
+	
+	<%= render 'form' %> 
+	
+	<div class="row"> 
+		<div class="span6">
+			<h4><%= @token.outcome.title %></h4> 
+			<p><%= @token.outcome.description %></p>
+		</div>
+	</div>
+	<div class="row"> 
+		<div class="span3">
+			<%= link_to 'Edit Outcome', edit_outcome_path(@token.outcome), :class => 'btn btn-small btn-success' %>
+		</div>
+	</div>	
+	
+	<div class="row">
+		<div class="span12"><%= link_to 'Back to Admin', '/admin', :class => 'btn btn-small btn-primary' %></div>
+	</div>
+</div>
+

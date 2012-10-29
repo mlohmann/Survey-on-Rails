@@ -1,0 +1,29 @@
+<h1>Listing token_impacts</h1>
+
+<table>
+  <tr>
+    <th>Token</th>
+    <th>Question</th>
+    <th>Affirm strength</th>
+    <th>Oppose strength</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @token_impacts.each do |token_impact| %>
+  <tr>
+    <td><%= token_impact.token_id %></td>
+    <td><%= token_impact.question_id %></td>
+    <td><%= token_impact.affirm_strength %></td>
+    <td><%= token_impact.oppose_strength %></td>
+    <td><%= link_to 'Show', token_impact %></td>
+    <td><%= link_to 'Edit', edit_token_impact_path(token_impact) %></td>
+    <td><%= link_to 'Destroy', token_impact, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Token impact', new_token_impact_path %>

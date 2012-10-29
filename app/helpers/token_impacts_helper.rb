@@ -1,0 +1,2 @@
+module TokenImpactsHelper
+end

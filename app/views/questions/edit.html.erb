@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<h1>Edit Question</h1>
+		</div>
+	</div>
+	
+	<%= render 'form' %>  
+	
+	<% @question.token_impacts.each do |token_impact| %>
+	<div class="row">
+	  <div class="span2">
+	    <%= token_impact.token_title %></td>   
+	  </div>
+	  <div class="span2">
+	    Affirm: <%= token_impact.affirm_strength %>
+	  </div>
+	  <div class="span2">
+	    Oppose: <%= token_impact.oppose_strength %>
+	  </div>
+	  <div class="span2">
+	    <%= link_to 'Edit', edit_token_impact_path(token_impact), :class => 'btn btn-small btn-success' %>
+	  </div>
+	</div>
+	<% end %>
+	
+	<div class="row">
+		<div class="span12"><%= link_to 'Back to Admin', '/admin', :class => 'btn btn-small btn-primary' %></div>
+	</div>
+</div>
+
