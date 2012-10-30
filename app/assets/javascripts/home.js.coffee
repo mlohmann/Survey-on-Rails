@@ -60,8 +60,7 @@ class SurveyApp
 			@tokenScores.push tokenScore
 
 	checkResponses:-> 
-		hasResponded = 0
-		sortedScores = []
+		hasResponded = 0 
 		
 		impress().next() 
 		
