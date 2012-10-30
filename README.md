@@ -15,6 +15,11 @@
 
 ### Admin Password
 * user:foo - password:bar
+
+### Seed DB with starter data
+* Navigate terminal to project and run:
+<pre>$ rake db:seed</pre>
+
 	
 ### Create Tokens
 * These are areas of concern or particular issues that voters care about
